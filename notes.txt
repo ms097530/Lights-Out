@@ -1,0 +1,29 @@
+Lights Out
+
+LightsOut component
+renders a grid of Light components
+
+LightsOut
+- state
+	- hasWon - boolean -> determine whether or not board is shown
+	- board - array of booleans -> each element represents a Light and whether
+		it should be on or off ( <Light isOn={this.state.board[i][j]} )
+- props
+	- grid size?
+
+Light
+- props	
+	- isOn boolean
+- method
+	- handleClick -> calls this.props.onClick
+
+
+- determine if board can be solved
+	- simulate a number of moves from a blank board
+		- if it was blank at the start, it can be made blank by reversing,
+		thus it can be solved
+		- can have props of lowerBound and upperBound for chance that
+		a square is lit up at the start
+		- generate a random number between bounds and then take that percent
+		of total squares and round to determine how many squares to
+		have lit on the board after simulation

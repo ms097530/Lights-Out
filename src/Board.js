@@ -52,7 +52,7 @@ class Board extends Component
     this.state =
     {
       board: this.createBoard(),
-      hasWon: false
+      hasWon: true
     };
   }
 

@@ -52,7 +52,7 @@ class Board extends Component
     this.state =
     {
       board: this.createBoard(),
-      hasWon: true
+      hasWon: false
     };
   }
 
@@ -226,23 +226,6 @@ class Board extends Component
         <button className="Board-restart-btn" onClick={this.restart}>Restart</button>
       </div>
     )
-    // how to do the same within the return
-    // <table className="Board">
-    //   {
-    //     this.state.board.map(arr =>
-    //       (
-    //         <tr>
-    //           {
-    //             arr.map(val =>
-    //               (
-    //                 <td>{val}</td>
-    //               ))
-    //           }
-    //         </tr>
-    //       ))
-    //   }
-    // </table>
-
   }
 }
 

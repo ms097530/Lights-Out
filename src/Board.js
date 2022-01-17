@@ -210,11 +210,11 @@ class Board extends Component
     ));
 
     return (
-      <div>
-        <h1>Lights Out</h1>
+      <div className="Board-container">
+        <div className="Board-title"><span className="neon-orange">Lights</span><span className="neon-blue">Out</span></div>
         {
           this.state.hasWon
-            ? <h2>You win!</h2>
+            ? <h2 className="Board-winMsg"><span className="neon-orange">YOU</span><span className="neon-blue">WIN!</span></h2>
             : <table className="Board">
               <tbody>
                 {
@@ -223,7 +223,7 @@ class Board extends Component
               </tbody>
             </table>
         }
-        <button onClick={this.restart}>Restart</button>
+        <button className="Board-restart-btn" onClick={this.restart}>Restart</button>
       </div>
     )
     // how to do the same within the return
